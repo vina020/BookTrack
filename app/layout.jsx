@@ -2,8 +2,7 @@ import { FavoritesProvider } from '../context/FavoritesContext';
 import { ReadingProvider } from '../context/ReadingContext';
 import { AuthProvider } from '../context/AuthContext';
 import { ThemeProvider } from '../context/ThemeContext';
-import '../css/book-detail.css';
-import '../css/auth.css';
+import '../css/globals.css';
 
 export const metadata = {
     title: 'BookTrack',

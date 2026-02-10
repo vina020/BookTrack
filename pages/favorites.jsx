@@ -2,12 +2,12 @@
 
 import { useFavorites } from "../context/FavoritesContext";
 import { useState } from "react";
-import BookDetailModal from "../app/components/BookDetailModal";
+import BookDetailModal from "../components/BookDetailModal";
 import { useRouter } from "next/router";
 import { FaHeart, FaClock, FaTimes, FaSearch } from "react-icons/fa";
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
-import CardBook from "../app/components/CardBook";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import CardBook from "../components/CardBook";
 import { HeartIcon } from "@heroicons/react/24/solid";
 
 export default function Favorites() {

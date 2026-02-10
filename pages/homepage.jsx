@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getBooks, getBooksByCategory } from "../services/book.service";
-import CardBook from "../app/components/CardBook";
+import CardBook from "../components/CardBook";
 import { bookQuotes } from "../services/quote";
-import QuoteCard from "../app/components/QuoteCard";
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+import QuoteCard from "../components/QuoteCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useRouter } from "next/router";
-import BookDetailModal from "../app/components/BookDetailModal";
+import BookDetailModal from "../components/BookDetailModal";
 import { useFavorites } from "../context/FavoritesContext";
 
 export default function Home() {
@@ -283,23 +283,23 @@ export default function Home() {
                         </p>
                     )}
                     
-                    {/* Featured Books Grid */}
-                    <div className="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
-                        {featuredBooks.length > 0 && featuredBooks.slice(0, 10).map((book) => (
-                        <CardBook 
-                            key={book.id}
-                            onClick={() => handleBookClick(book)}
-                        >
-                            <CardBook.Header image={book.image} />
-                            <CardBook.Body author={book.author} title={book.title} />
-                            <CardBook.Footer 
-                                rating={book.rating}
-                                book={book}
-                                handleAddFavorite={handleAddFavorite}
-                            />
-                        </CardBook>
-                    ))}
-                    </div>
+{/* Featured Books Grid */}
+<div className="grid grid-cols-5 !gap-6 mt-10 max-[1024px]:grid-cols-4 max-[768px]:grid-cols-3 max-[600px]:grid-cols-2 max-[480px]:grid-cols-1">
+    {featuredBooks.length > 0 && featuredBooks.slice(0, 10).map((book) => (
+        <CardBook 
+            key={book.id}
+            onClick={() => handleBookClick(book)}
+        >
+            <CardBook.Header image={book.image} />
+            <CardBook.Body author={book.author} title={book.title} />
+            <CardBook.Footer 
+                rating={book.rating}
+                book={book}
+                handleAddFavorite={handleAddFavorite}
+            />
+        </CardBook>
+    ))}
+</div>
                 </div>
             </section>
             
@@ -311,6 +311,7 @@ export default function Home() {
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
                 onViewMore={handleViewMore}
+                hideViewMore={true}
             />
         </div>
     );

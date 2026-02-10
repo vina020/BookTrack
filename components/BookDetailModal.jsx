@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import "../../css/book-detail.css";
+import "../css/book-detail.css";
 import { useState } from "react";
-import { getRelatedBooks } from "../../services/book.service";
-import { useFavorites } from "../../context/FavoritesContext";
+import { getRelatedBooks } from "../services/book.service";
+import { useFavorites } from "../context/FavoritesContext";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { useReading } from "../../context/ReadingContext";
+import { useReading } from "../context/ReadingContext";
 import { useRouter } from "next/router";
 
-export default function BookDetailModal({ book, isOpen, onClose, onViewMore }) {
+export default function BookDetailModal({ book, isOpen, onClose, onViewMore, hideViewMore = false}) {
 
     const [relatedBooks, setRelatedBooks] = useState([]);
     const [loadingRelated, setLoadingRelated] = useState(false);
@@ -158,12 +158,14 @@ export default function BookDetailModal({ book, isOpen, onClose, onViewMore }) {
                         </div>
 
                         {/* View More Button - TAMBAH className */}
-                        <button 
-                            className="button-view-more"
-                            onClick={() => onViewMore(book)}
-                        >
-                            View Full Details
-                        </button>
+                        {!hideViewMore && (
+                    <button 
+                        className="button-view-more"
+                        onClick={() => onViewMore(book)}
+                    >
+                        View Full Details
+                    </button>
+                )}
                     </div>
                 </div>
 

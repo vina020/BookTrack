@@ -1,4 +1,4 @@
-import "../../css/homepage.css";
+import "../css/homepage.css";
 
 export default function QuoteCard({ quote, onNext }) {
     if (!quote) return null;

@@ -1,4 +1,4 @@
-import "../../css/footer.css";
+import "../css/footer.css";
 import { FaBookOpenReader } from "react-icons/fa6";
 
 export default function Footer() {

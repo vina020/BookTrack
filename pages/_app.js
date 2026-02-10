@@ -6,6 +6,7 @@ import { AuthProvider } from '../context/AuthContext';
 import React from 'react';
 import { ThemeProvider } from '../context/ThemeContext';
 import '../css/globals.css';
+import '../css/homepage.css';
 
 function MyApp({ Component, pageProps }) {
     return (

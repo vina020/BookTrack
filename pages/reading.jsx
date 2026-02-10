@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { FaBook, FaClock, FaBookmark, FaChevronRight } from "react-icons/fa";
 import "../css/reading.css";
 import { useReading } from "../context/ReadingContext";
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function ReadingNow() {
     const router = useRouter();

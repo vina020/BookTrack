@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { getBooksByCategory, searchBooks } from "../services/book.service";
-import BookDetailModal from "../app/components/BookDetailModal";
-import CardBook from "../app/components/CardBook";
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+import BookDetailModal from "../components/BookDetailModal";
+import CardBook from "../components/CardBook";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Catalog() {
   const [books, setBooks] = useState([]);

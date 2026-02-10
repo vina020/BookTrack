@@ -1,4 +1,3 @@
-import "../css/homepage.css"
 export const bookQuotes = [
     {
         id: 1,

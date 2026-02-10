@@ -1,12 +1,10 @@
 "use client";
 import { createContext, useContext, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 const FavoritesContext = createContext();
 
 export function FavoritesProvider({ children }) {
     const [favorites, setFavorites] = useState([]);
-    const router = useRouter();
 
     // Load favorites dari localStorage saat pertama kali
     useEffect(() => {
@@ -26,7 +24,7 @@ export function FavoritesProvider({ children }) {
         
         if (!isLoggedIn || isLoggedIn === 'false') {
             alert('Please login to add books to favorites!');
-            router.push('/login');
+            window.location.href = '/login';
             return false;
         }
 

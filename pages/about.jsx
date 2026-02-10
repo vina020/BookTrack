@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { FaBook, FaBullseye, FaMagic, FaMoon, FaUsers, FaCode, FaPalette, FaBookReader } from 'react-icons/fa';
 
 export default function About() {
@@ -10,31 +10,16 @@ export default function About() {
             <Navbar />
 
         {/* Hero Section */}
-        <section className="bg-[linear-gradient(135deg,#f7cac4_0%,#f5e6e4_100%)] dark:bg-[linear-gradient(135deg,#4a3a3a_0%,#3a2f2f_100%)] py-[80px] text-center">
-        <div className="max-w-[800px] mx-auto">
-            <h1
-            className="
-                text-[48px]
-                font-[300]
-                text-[var(--text-primary)]
-                mb-[20px]
-                font-serif
-            "
-            >
+<section className="py-[80px] text-center" style={{ background: 'linear-gradient(135deg, var(--hero-gradient-from) 0%, var(--hero-gradient-to) 100%)' }}>
+    <div className="max-w-[800px] mx-auto px-5">
+        <h1 className="text-[48px] font-[300] text-[var(--text-primary)] mb-[20px] font-serif max-md:text-[36px]">
             About BookTrack
-            </h1>
-
-            <p
-            className="
-                text-[18px]
-                text-[var(--text-secondary)]
-                leading-[1.6]
-            "
-            >
+        </h1>
+        <p className="text-[18px] text-[var(--text-secondary)] leading-[1.6]">
             Your gateway to endless knowledge and stories
-            </p>
-        </div>
-        </section>
+        </p>
+    </div>
+</section>
 
             {/* Mission Section */}
             <section className="py-20 bg-[var(--bg-primary)] max-md:py-[70px]">
@@ -172,20 +157,22 @@ export default function About() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-br from-[#f7cac4] to-[#f5e6e4] dark:from-[#4a3a3a] dark:to-[#3a2f2f] text-center max-md:py-[60px]">
-                <div className="max-w-[700px] mx-auto px-5">
-                    <h2 className="text-[36px] font-light text-[var(--text-primary)] mb-5 font-serif max-md:text-[28px]">Start Your Reading Journey Today</h2>
-                    <p className="text-[16px] text-[var(--text-secondary)] mb-[30px] leading-[1.6]">
-                        Join thousands of readers who have discovered their next favorite book with BookTrack
-                    </p>
-                    <button 
-                        className="bg-[#d95140] text-white border-none py-[15px] px-[35px] text-[14px] tracking-[1px] cursor-pointer transition-colors duration-300 font-medium rounded-lg hover:bg-[#c44434]"
-                        onClick={() => window.location.href = '/catalog'}
-                    >
-                        Explore Books
-                    </button>
-                </div>
-            </section>
+<section className="py-20 text-center max-md:py-[60px]" style={{ background: 'linear-gradient(135deg, var(--hero-gradient-from) 0%, var(--hero-gradient-to) 100%)' }}>
+    <div className="max-w-[700px] mx-auto px-5">
+        <h2 className="text-[36px] font-light text-[var(--text-primary)] mb-5 font-serif max-md:text-[28px]">
+            Start Your Reading Journey Today
+        </h2>
+        <p className="text-[16px] text-[var(--text-secondary)] mb-[30px] leading-[1.6]">
+            Join thousands of readers who have discovered their next favorite book with BookTrack
+        </p>
+        <button 
+            className="bg-[#d95140] text-white border-none py-[15px] px-[35px] text-[14px] tracking-[1px] cursor-pointer transition-all duration-300 font-medium rounded-lg hover:bg-[#c44434] hover:shadow-lg hover:-translate-y-0.5"
+            onClick={() => window.location.href = '/catalog'}
+        >
+            Explore Books
+        </button>
+    </div>
+</section>
 
             <Footer />
         </div>
