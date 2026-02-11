@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.settings-container {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 100px 20px 40px;
+    transition: background 0.3s ease;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.settings-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.settings-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.settings-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.settings-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.section-icon {
+    font-size: 1.25rem;
+    color: #f7cac4;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item.clickable {
+    cursor: pointer;
+    transition: background 0.2s ease;
+    padding: 16px;
+    margin: 0 -16px;
+    border-radius: 8px;
+}
+
+.setting-item.clickable:hover {
+    background: var(--hover-bg);
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.setting-label svg {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.setting-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #f7cac4;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Danger Section */
+.danger-section {
+    border: 1px solid #fee;
+}
+
+.danger-button {
+    width: 100%;
+    padding: 12px;
+    background: #fee;
+    color: #c33;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dark-mode .danger-button {
+    background: #4a2020 !important;  
+    color: white !important;      
+    border: 1px solid #ff6b6b !important;
+}
+
+.dark-mode .danger-button:hover {
+    background: #5a2828;
+}
+
+/* Dark Mode Variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --border-color: #e5e5e5;
+    --hover-bg: #f5f5f5;
+}
+
+.dark-mode {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --card-bg: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+    --hover-bg: #3a3a3a;
+}
+
+.dark-mode .settings-section {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .danger-button {
+    background: #3d1f1f;
+    color: #ff6b6b;
+    border-color: #5a2c2c;
+}
+
+.dark-mode .danger-button:hover {
+    background: #4d2626;
+    border-color: #6d3333;
+}
+
+@media (max-width: 768px) {
+    .settings-title {
+        font-size: 2rem;
+    }
+    
+    .settings-section {
+        padding: 16px;
+    }
+}
