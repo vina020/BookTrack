@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "../css/book-detail.css";
 import { useState } from "react";
 import { getRelatedBooks } from "../services/book.service";
 import { useFavorites } from "../context/FavoritesContext";

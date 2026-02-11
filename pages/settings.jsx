@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import "../css/settings.css";
 import { useTheme } from "../context/ThemeContext";
 import { FaMoon, FaSun, FaBell, FaLock, FaUser, FaLanguage } from "react-icons/fa";
 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../css/navbar.css";
 import { FaHome, FaBookOpen, FaBook, FaHeart } from "react-icons/fa";
 import { FaBookOpenReader } from "react-icons/fa6";
 import { useAuth } from "../context/AuthContext";

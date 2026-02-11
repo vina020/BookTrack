@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getBookDetail } from "../services/book.service";
-import "../css/bookdetail.css";
 import { FaBook } from "react-icons/fa";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useFavorites } from "../context/FavoritesContext";

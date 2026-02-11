@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { FaBook, FaClock, FaBookmark, FaChevronRight } from "react-icons/fa";
-import "../css/reading.css";
 import { useReading } from "../context/ReadingContext";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
