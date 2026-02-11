@@ -7,6 +7,12 @@ import React from 'react';
 import { ThemeProvider } from '../context/ThemeContext';
 import '../css/globals.css';
 import '../css/homepage.css';
+import '../css/about.css';
+import '../css/bookdetail.css';
+import '../css/footer.css';
+import '../css/navbar.css';
+import '../css/reading.css';
+import '../css/settings.css';
 
 function MyApp({ Component, pageProps }) {
     return (
